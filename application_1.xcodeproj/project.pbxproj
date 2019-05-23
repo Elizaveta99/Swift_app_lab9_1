@@ -12,6 +12,8 @@
 		C9517F052296F35100AEF5E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9517F032296F35100AEF5E9 /* Main.storyboard */; };
 		C9517F072296F35600AEF5E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9517F062296F35600AEF5E9 /* Assets.xcassets */; };
 		C9517F0A2296F35600AEF5E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9517F082296F35600AEF5E9 /* LaunchScreen.storyboard */; };
+		C9517F152297205100AEF5E9 /* onlineCoursers.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9517F142297205000AEF5E9 /* onlineCoursers.plist */; };
+		C9517F1B22972D5100AEF5E9 /* onlineCoursersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9517F1A22972D5100AEF5E9 /* onlineCoursersCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C9517F062296F35600AEF5E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9517F092296F35600AEF5E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9517F0B2296F35600AEF5E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9517F142297205000AEF5E9 /* onlineCoursers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = onlineCoursers.plist; sourceTree = "<group>"; };
+		C9517F1A22972D5100AEF5E9 /* onlineCoursersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onlineCoursersCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 				C9517EFF2296F35100AEF5E9 /* AppDelegate.swift */,
 				C9517F062296F35600AEF5E9 /* Assets.xcassets */,
 				C9517F0B2296F35600AEF5E9 /* Info.plist */,
+				C9517F142297205000AEF5E9 /* onlineCoursers.plist */,
 			);
 			path = application_1;
 			sourceTree = "<group>";
@@ -67,6 +72,7 @@
 		C9517F112296F54E00AEF5E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C9517F1A22972D5100AEF5E9 /* onlineCoursersCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9517F0A2296F35600AEF5E9 /* LaunchScreen.storyboard in Resources */,
+				C9517F152297205100AEF5E9 /* onlineCoursers.plist in Resources */,
 				C9517F072296F35600AEF5E9 /* Assets.xcassets in Resources */,
 				C9517F052296F35100AEF5E9 /* Main.storyboard in Resources */,
 			);
@@ -161,6 +168,7 @@
 			files = (
 				C9517F022296F35100AEF5E9 /* ViewController.swift in Sources */,
 				C9517F002296F35100AEF5E9 /* AppDelegate.swift in Sources */,
+				C9517F1B22972D5100AEF5E9 /* onlineCoursersCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

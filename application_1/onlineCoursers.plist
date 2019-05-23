@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   onlineCoursers.plist
+   application_1
+
+   Created by Lizaveta Rudzko on 3/2/1398 AP.
+   Copyright (c) 1398 Lizaveta Rudzko. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>Java</key>
+        <string>Take your first step towards a career in software development with this introduction to Java—one of the most in-demand programming languages and the foundation of the Android operating system. Designed for beginners, this Specialization will teach you core programming concepts and equip you to write programs to solve complex problems. In addition, you will gain the foundational skills a software engineer needs to solve real-world problems, from designing algorithms to testing and debugging your programs.</string>
+        <key>C/C++</key>
+        <string>This course is for experienced C programmers who want to program in C++. The examples and exercises require a basic understanding of algorithms and object-oriented software.</string>
+        <key>C#</key>
+        <string>This specialization is intended for beginning programmers who want to learn how to program Unity games using C#. The first course assumes no programming experience, and throughout the 5 courses in the specialization you'll learn how to program in C# and how to use that C# knowledge to program Unity games. </string>
+        <key>Swift</key>
+        <string>Introduction to Swift Programming is the first course in a four part specialization series that will provide you with the tools and skills necessary to develop an iOS App from scratch. By the end of this first course you will be able to demonstrate intermediate application of programming in Swift, the powerful new programming language for iOS.</string>
+        <key>Python</key>
+        <string>This Specialization builds on the success of the Python for Everybody course and will introduce fundamental programming concepts including data structures, networked application program interfaces, and databases, using the Python programming language. In the Capstone Project, you’ll use the technologies learned throughout the Specialization to design and create your own applications for data retrieval, processing, and visualization.</string>
+        <key>Ruby</key>
+        <string>In this course, we will explore how to build web applications with the Ruby on Rails web application framework, which is geared towards rapid prototyping.  Yes, that means building quickly!</string>
+    </dict>
+</plist>

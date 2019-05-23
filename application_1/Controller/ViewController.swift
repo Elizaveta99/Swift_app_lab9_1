@@ -8,7 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+struct onlineCoursers
+{
+    let title: String
+    let image: UIImage
+}
+
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource 
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = onlineCoursersView.dequeueReusableCell(withReuseIdentifier: "onlinecourserscell", for: indexPath as IndexPath) as! onlineCoursersCell
+        cell.title.text = Array(descriptions.keys)[indexPath.item]
+        cell.image.image = UIImage.init(named: images[indexPath.item])!
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    descriptionLabel.text = descriptions[Array(descriptions.keys)[indexPath.item]]
+    
+    return false
+    }
 
     @IBOutlet var secondView: UIView!
     @IBOutlet var choose: UISegmentedControl!
@@ -74,10 +97,25 @@ class ViewController: UIViewController {
         }
     }
     
+    var descriptions: [String: String] = [:]
+    var images = ["java.jpg", "cc++.jpg", "c#.jpg", "swift.jpg", "python.jpg", "ruby.jpg"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         secondView.isHidden = true
+        onlineCoursersView.delegate = self
+        onlineCoursersView.dataSource = self
         onlineCoursersView.isHidden = true
+        
+        //set data from plist
+        var format = PropertyListSerialization.PropertyListFormat.xml
+        let plistPath = Bundle.main.path(forResource: "onlineCoursers", ofType: "plist")
+        let plistXML = FileManager.default.contents(atPath: plistPath!)
+        do
+        {
+            descriptions = try PropertyListSerialization.propertyList(from: plistXML!, options: .mutableContainersAndLeaves, format: &format) as! [String: String]
+        }
+        catch { }
     }
 
 
