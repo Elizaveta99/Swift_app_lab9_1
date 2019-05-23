@@ -59,6 +59,9 @@
                                         <rect key="frame" x="271" y="72" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.20239159464836121" green="0.10065080970525742" blue="0.57670587301254272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="agreeSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="46p-k6-lbQ"/>
+                                        </connections>
                                     </switch>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Повторить пароль" borderStyle="roundedRect" placeholder="Повторить пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xIJ-rs-8Bz">
                                         <rect key="frame" x="30" y="16" width="297" height="30"/>
@@ -77,7 +80,38 @@
                                 <state key="normal" title="Войти">
                                     <color key="titleColor" red="0.20239159464836121" green="0.10065080970525742" blue="0.57670587301254272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="enterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oMV-SP-c8l"/>
+                                </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8SR-nx-5CA">
+                                <rect key="frame" x="32" y="77" width="356" height="498"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MPi-l9-S2r">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RzR-hp-fnQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="572-r4-rc5">
+                                <rect key="frame" x="26" y="617" width="362" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -86,8 +120,10 @@
                         <outlet property="agreeLabel" destination="UgY-cC-zCe" id="4ok-bA-piX"/>
                         <outlet property="agreeSwitch" destination="VDN-jP-4Bd" id="IzN-9e-IgK"/>
                         <outlet property="choose" destination="08A-N2-gf1" id="GJK-Gh-tFD"/>
+                        <outlet property="descriptionLabel" destination="572-r4-rc5" id="wRe-D2-vpt"/>
                         <outlet property="enterButton" destination="o0l-ik-ZmB" id="Bna-jr-Qxc"/>
                         <outlet property="login" destination="9tS-nf-Qsy" id="GPk-2n-thg"/>
+                        <outlet property="onlineCoursersView" destination="8SR-nx-5CA" id="M9G-WX-hPx"/>
                         <outlet property="password" destination="sfn-g7-NEU" id="KPy-7f-ky0"/>
                         <outlet property="passwordAgain" destination="xIJ-rs-8Bz" id="NWb-EF-gmm"/>
                         <outlet property="secondView" destination="PbJ-ba-Tdc" id="dU2-Mi-dHj"/>
